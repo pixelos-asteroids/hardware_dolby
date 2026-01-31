@@ -35,6 +35,7 @@ android_app {
     ],
 
     required: [
+        "privapp_whitelist_org.lunaris.dolby.xml",
         "preinstalled-packages-platform-dolby.xml",
         "DolbyEffects",
     ],
@@ -44,5 +45,12 @@ prebuilt_etc {
     name: "preinstalled-packages-platform-dolby.xml",
     src: "preinstalled-packages-platform-dolby.xml",
     sub_dir: "sysconfig",
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_org.lunaris.dolby.xml",
+    src: "privapp_whitelist_org.lunaris.dolby.xml",
+    sub_dir: "permissions",
     system_ext_specific: true,
 }
